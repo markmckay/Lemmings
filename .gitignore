@@ -1,0 +1,3 @@
+# Cleanup/exception list
+# macOS Finder metadata (local-only)
+.DS_Store
