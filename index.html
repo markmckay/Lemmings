@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Lemmings</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Main Menu -->
+<div id="main-menu">
+  <h1>LEMMINGS</h1>
+  <p class="subtitle">HTML5 Edition</p>
+  <button id="btn-play">PLAY GAME</button>
+</div>
+
+<!-- Level Select -->
+<div id="level-select">
+  <h2>SELECT LEVEL</h2>
+  <div class="category-tabs">
+    <button class="cat-tab active" data-cat="fun">FUN</button>
+    <button class="cat-tab" data-cat="tricky">TRICKY</button>
+    <button class="cat-tab" data-cat="taxing">TAXING</button>
+    <button class="cat-tab" data-cat="mayhem">MAYHEM</button>
+  </div>
+  <div class="level-grid" id="level-grid"></div>
+  <div style="text-align:center;margin-top:16px;">
+    <button class="action-btn" id="btn-back-menu" style="font-size:14px;padding:8px 20px;">← MENU</button>
+  </div>
+</div>
+
+<!-- Game UI -->
+<div id="app">
+  <!-- HUD top bar -->
+  <div id="hud">
+    <span id="hud-out">OUT: 0</span>
+    <span id="hud-in">IN: 0</span>
+    <span id="hud-saved">SAVED: 0/0</span>
+    <span id="hud-time">TIME: 7:00</span>
+  </div>
+
+  <!-- Canvas -->
+  <div id="game-container">
+    <canvas id="game-canvas"></canvas>
+    <!-- Result overlay -->
+    <div id="overlay">
+      <h1 id="overlay-title">LEVEL COMPLETE!</h1>
+      <p id="overlay-msg"></p>
+      <div class="big-stat" id="overlay-stat"></div>
+      <div class="overlay-buttons">
+        <button id="btn-next" class="primary">NEXT LEVEL</button>
+        <button id="btn-retry">RETRY</button>
+        <button id="btn-menu">MENU</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Skill toolbar -->
+  <div id="toolbar">
+    <div id="skill-buttons"></div>
+    <div id="toolbar-right">
+      <div class="rate-controls">
+        <button class="rate-btn" id="rate-minus">−</button>
+        <span id="rate-display">50</span>
+        <button class="rate-btn" id="rate-plus">+</button>
+      </div>
+      <div class="action-buttons">
+        <button class="action-btn" id="pause-btn">⏸</button>
+        <button class="action-btn" id="nuke-btn" style="color:#f88">💣</button>
+        <button class="action-btn" id="btn-levels">≡</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
